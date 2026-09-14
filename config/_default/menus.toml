@@ -1,0 +1,83 @@
+[[main]]
+identifier = "archives"
+name = "归档"
+url = "/archives/"
+weight = 1
+[main.params]
+icon = "fa-solid fa-archive"
+
+[[main]]
+identifier = "study"
+name = "学习"
+url = "/categories/"
+weight = 2
+[main.params]
+icon = "fa-solid fa-graduation-cap"
+
+[[main]]
+identifier = "algorithms"
+parent = "study"
+name = "算法"
+url = "/categories/algorithms/"
+weight = 1
+[main.params]
+icon = "fa-solid fa-code"
+
+[[main]]
+identifier = "ai-infra"
+parent = "study"
+name = "AI Infra"
+url = "/categories/ai-infra/"
+weight = 2
+[main.params]
+icon = "fa-solid fa-microchip"
+
+[[main]]
+identifier = "sports"
+name = "运动"
+url = "/categories/sports/"
+weight = 3
+[main.params]
+icon = "fa-solid fa-person-running"
+
+[[main]]
+identifier = "fitness"
+parent = "sports"
+name = "健身"
+url = "/categories/fitness/"
+weight = 1
+[main.params]
+icon = "fa-solid fa-dumbbell"
+
+[[main]]
+identifier = "basketball"
+parent = "sports"
+name = "篮球"
+url = "/categories/basketball/"
+weight = 2
+[main.params]
+icon = "fa-solid fa-basketball"
+
+[[main]]
+identifier = "daily"
+name = "日常"
+url = "/categories/daily/"
+weight = 4
+[main.params]
+icon = "fa-solid fa-camera-retro"
+
+[[main]]
+identifier = "tags"
+name = "标签"
+url = "/tags/"
+weight = 5
+[main.params]
+icon = "fa-solid fa-tags"
+
+[[main]]
+identifier = "about"
+name = "关于"
+url = "/about/"
+weight = 6
+[main.params]
+icon = "fa-solid fa-user"

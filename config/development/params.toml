@@ -1,0 +1,43 @@
+description = "Kaitou 的 AI Infra、GPU 系统与工程实践笔记"
+keywords = ["AI Infra", "GPU", "CUDA", "LLM Serving", "系统工程"]
+
+[author]
+name = "Kaitou"
+email = ""
+link = "https://github.com/Kaitounb"
+avatar = ""
+
+[app]
+title = "Kaitou 的博客"
+
+[header]
+
+[header.title]
+name = "Kaitou"
+
+[header.subtitle]
+name = "AI Infra · 系统 · 工程"
+
+[search]
+enable = true
+type = "fuse"
+placeholder = "搜索文章标题或内容……"
+
+[home.posts]
+enable = true
+paginate = 10
+
+[home.profile]
+enable = true
+title = "Kaitou"
+subtitle = "算法 · AI Infra · 健身 · 篮球 · 日常"
+typeit = true
+social = true
+
+[social]
+GitHub = "Kaitounb"
+RSS = true
+
+[pangu]
+enable = true
+selector = "article"
