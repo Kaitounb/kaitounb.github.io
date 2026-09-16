@@ -33,6 +33,15 @@ weight = 2
 icon = "fa-solid fa-microchip"
 
 [[main]]
+identifier = "ai-infra-lectures"
+parent = "study"
+name = "课程讲义"
+url = "/posts/infra-seminars-topic-1/"
+weight = 3
+[main.params]
+icon = "fa-solid fa-book-open"
+
+[[main]]
 identifier = "sports"
 name = "运动"
 url = "/categories/sports/"

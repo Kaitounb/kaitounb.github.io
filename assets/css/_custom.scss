@@ -2,3 +2,79 @@
 // Custom style
 // 自定义样式
 // ==============================
+
+.lecture-attribution {
+  margin: 1rem 0 1.5rem;
+  padding: 0.9rem 1rem;
+  border-left: 0.25rem solid #3451b2;
+  border-radius: 0.35rem;
+  background: rgba(52, 81, 178, 0.08);
+  line-height: 1.75;
+}
+
+.lecture-source {
+  .session-banner {
+    margin-bottom: 1.5rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    border-radius: 0.5rem;
+  }
+
+  .wiki-breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .session-banner-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 1rem;
+  }
+
+  .feishu-grid {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .feishu-grid-column {
+    min-width: 0;
+    flex: var(--feishu-column-width, 1) 1 0;
+  }
+
+  figure {
+    margin: 1.25rem auto;
+    text-align: center;
+  }
+
+  figure img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  figcaption {
+    margin-top: 0.5rem;
+    color: #7a7a7a;
+    font-size: 0.9rem;
+  }
+
+  .lang {
+    display: block;
+    margin-bottom: -0.5rem;
+    color: #7a7a7a;
+    font-size: 0.8rem;
+    text-align: right;
+  }
+}
+
+@media (max-width: 680px) {
+  .lecture-source .feishu-grid {
+    display: block;
+  }
+}
