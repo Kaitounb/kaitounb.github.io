@@ -65,4 +65,60 @@ toc:
 
 </div>
 
+## Naïve GEMM 工作拆分 – 每个thread一个元素
+
+<div class="feishu-grid">
+
+<div class="feishu-grid-column" style="--feishu-column-width:0.5142;">
+
+<figure class="feishu-figure">
+<div class="feishu-image-frame">
+<img src="/lectures/topic-1/media/AwWTwMUDxiO5APkFt2Jc9hhknsf/gemm-naive-thread-elements.png" loading="lazy" decoding="async" width="719" height="650" />
+</div>
+</figure>
+
+<figure class="feishu-figure">
+<div class="feishu-image-frame">
+<img src="/lectures/topic-1/media/AwWTwMUDxiO5APkFt2Jc9hhknsf/gemm-naive-block-thread-mapping.png" loading="lazy" decoding="async" width="850" height="496" />
+</div>
+</figure>
+
+</div>
+
+<div class="feishu-grid-column" style="--feishu-column-width:0.4858;">
+
+<div class="language-C++ vp-adaptive-theme">
+
+<span class="lang">C++</span>
+
+```text {class="line-wrapping"}
+__global__ void gemm_naive(
+    const float* __restrict__ A,
+    const float* __restrict__ B,
+    float* __restrict__ C,
+    int M, int N, int K
+) {
+    int row = blockIdx.y * blockDim.y + threadIdx.y;
+    int col = blockIdx.x * blockDim.x + threadIdx.x;
+
+    if (row >= M || col >= N) return;
+    float acc = 0.0f;
+    for (int k = 0; k < K; ++k) {
+        acc += A[row * K + k] * B[k * N + col];
+    }
+    C[row * N + col] = acc;
+}
+
+dim3 block(16, 16);
+dim3 grid(ceil_div(N, 16), ceil_div(M, 16));
+
+gemm_naive<<<grid, block>>>(A, B, C, M, N, K);
+```
+
+</div>
+
+</div>
+
+</div>
+
 </div>
